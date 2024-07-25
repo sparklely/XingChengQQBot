@@ -23,12 +23,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Build
-      run: |
-        npm install
-        npm run build
+      run: ./build.sh
 
     - name: Upload output artifacts
       uses: actions/upload-artifact@v4
       with:
         name: build result
-        path: ./build/ # or path/to/artifact
+        path: ./dist/
