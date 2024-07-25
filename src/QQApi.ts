@@ -1,8 +1,8 @@
 export class QQApi{
 
-    appId:string
-    clientSecret:string
-    appAccessToken
+    appId:string = ""
+    clientSecret:string = ""
+    appAccessToken:any = {}
     reHeaders=new Map<string, string>()
     qqurl="https://api.sgroup.qq.com"
 
