@@ -36,7 +36,7 @@ export class QQApi{
 
     getWebSocketAddress(){
         fetch(this.qqurl+"/gateway",{
-            headers:this.reHeaders
+            "headers": Object.fromEntries(this.reHeaders) as Record<string, string>
         }).then(
             (response)=>{
                 response.json().then(
